@@ -741,7 +741,7 @@ var SpotifyService = /** @class */ (function () {
         this.poolURlS = {
             authorize: 'https://accounts.spotify.com/es-ES/authorize?client_id=' +
                 this.credentials.clientId + '&response_type=token' +
-                '&redirect_uri=' + encodeURIComponent('/#/') +
+                '&redirect_uri=' + encodeURIComponent('https://dennysjmarquez.github.io/angular7-spotify/dist/spotify/') +
                 '&expires_in=3600',
             refreshaAcessToken: 'https://accounts.spotify.com/api/token'
         };
