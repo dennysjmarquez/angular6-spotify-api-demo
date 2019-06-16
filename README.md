@@ -1,5 +1,5 @@
 ## Demo
-https://dennysjmarquez.github.io/angular6-spotify/dist/spotify
+https://dennysjmarquez.github.io/angular6-spotify-api-demo/dist/spotify
 
 # Spotify
 
