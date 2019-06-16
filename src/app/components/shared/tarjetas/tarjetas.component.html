@@ -1,6 +1,8 @@
 <div class="card-columns columns-style-1 animated fast">
   <div *ngFor="let item of tarjetaData" class="card card-style-2 animated fadeIn" >
+
     <img (click)="view(item)" class="card-img-top card-img-style-1 puntero" [src]="item.images | noimage: 1" alt="Card image cap">
+
     <div class="card-body">
       <h5 class="card-title">{{ item.name }}</h5>
 

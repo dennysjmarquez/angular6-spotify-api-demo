@@ -14,15 +14,13 @@ export class TarjetasComponent implements OnInit {
 
   view(v: any){
 
-    let id = v.id;
-
     switch (v.type) {
 
       case 'album':
-        // this._router.navigate(['/artist', id]);
+        window.open(v.external_urls.spotify, '_blank');
         break;
       case 'artist':
-        this._router.navigate(['/artist', id]);
+        this._router.navigate(['/artist', v.id]);
 
     }
 
