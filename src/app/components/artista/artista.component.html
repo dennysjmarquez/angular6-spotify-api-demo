@@ -1,0 +1,68 @@
+<app-loading *ngIf="loading"></app-loading>
+<div class="row pt-5 animated fadeIn">
+
+  <div class="col-md-2">
+
+    <img [src]="artista.images | noimage: 1" class="figure-img img-circle">
+
+  </div>
+
+  <div class="col-md">
+
+    <h3>{{ artista.name }}</h3>
+
+    <p>
+      <a *ngIf="artista.external_urls" [href]="artista.external_urls.spotify" target="_blank">Ir a la página del artista</a>
+    </p>
+
+  </div>
+
+  <div class="col-md-4 col-md text-right">
+
+    <button class="btn btn-danger" (click)="regresar()">
+
+      << Regresar
+
+    </button>
+
+  </div>
+
+</div>
+<div class="row pt-5 animated fast">
+
+  <div class="container">
+
+    <table class="table table-borderless">
+
+      <thead class="bg-secondary">
+
+        <tr>
+          <th>Foto</th>
+          <th>Album</th>
+          <th>Canción</th>
+          <th>Vista Pevia</th>
+        </tr>
+
+      </thead>
+      <tbody>
+
+      <tr *ngFor="let item of topTracks">
+        <td><img [src]="item.album.images | noimage:2" [alt]="item.album.name"></td>
+        <td>{{ item.album.name }}</td>
+        <td>{{ item.name }}</td>
+        <td>
+
+          <!--<audio [src]="item.preview_url" controls></audio>-->
+          <iframe [src]="('https://open.spotify.com/embed/track/' + item.id) | domseguro" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+        </td>
+      </tr>
+
+      </tbody>
+
+
+    </table>
+
+  </div>
+
+</div>

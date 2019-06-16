@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col col-md-5 pal-s">
+
+    <div class="input-group mb-3">
+      <input #search1 type="text" (keyup.enter)="search(search1.value)" class="form-control" placeholder="Buscar Artistas..." aria-label="Buscar Artistas..." aria-describedby="Buscar">
+      <div class="input-group-append">
+        <button (click)="search(search1.value)"  class="btn btn-dark" type="button" id="button-addon2">Buscar</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<app-loading *ngIf="loading"></app-loading>
+<app-tarjetas [tarjetaData]="searchArtis"></app-tarjetas>

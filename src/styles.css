@@ -1,0 +1,133 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+  height: 100%;
+}
+
+.card-style-1 {
+  border: 0;
+  border-radius: 0;
+  background: none;
+}
+
+.card-style-2 {
+  max-width: 212px;
+  margin: auto auto .75rem auto !important;
+  background: none !important;
+  border: 1px solid #333;
+}
+
+.card-style-2 .card-title, .card-style-2 .card-text{
+  color: #fff;
+}
+
+.columns-style-1 {
+  -webkit-column-count: auto;
+  column-count: auto;
+  column-width: 200px;
+}
+
+
+body {
+  background-color: black;
+  color: white !important;
+}
+
+hr {
+  border-color: white;
+}
+
+.puntero {
+  cursor: pointer;
+}
+
+.img-circle {
+  border-radius: 100%;
+  width: 150px;
+}
+
+.card-title,
+.card-text {
+  color: black;
+}
+
+.badge {
+  margin-left: 5px;
+}
+
+.btn-outline-success {
+  margin-left: 5px;
+}
+
+.img-thumb {
+  width: 50px;
+  height: 50px;
+}
+
+/* Animaciones */
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.fast {
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+app-navbar {
+  display: contents;
+}
+
+hr.style11 {
+  position: relative;
+  border-top: 1px dashed #8c8b8b;
+  border-bottom: 0;
+  border-right: 0;
+}
+
+hr.style11:after {
+  /*content: '\01F3B5';*/
+  content: '';
+  display: inline-block;
+  position: relative;
+  padding: 0 3px;
+  background-color: #fff;
+  color: #8c8b8b;
+  font-size: 18px;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  height: 29px;
+  width: 29px;
+  background-image: url("./assets/img/notam.jpg");
+}
+
+.card-img-style-1{
+  width: 210px;
+
+}
+
+@media (min-width:768px) {
+  .pal-s{
+    padding-left: 159px;
+  }
+}
