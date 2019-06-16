@@ -1,5 +1,5 @@
 ## Demo
-https://dennysjmarquez.github.io/angular6-spotify/dist/spotify
+<a href="https://dennysjmarquez.github.io/angular6-spotify/dist/spotify" target="_blank">https://dennysjmarquez.github.io/angular6-spotify/dist/spotify</a>
 
 # Spotify
 
