@@ -19,7 +19,7 @@ export class SpotifyService {
 
     authorize: 'https://accounts.spotify.com/es-ES/authorize?client_id=' +
       this.credentials.clientId + '&response_type=token' +
-      '&redirect_uri=' + encodeURIComponent('https://dennysjmarquez.github.io/angular6-spotify-api-demo/dist/spotify') +
+      '&redirect_uri=' + encodeURIComponent('https://dennysjmarquez.github.io/angular6-spotify-api-demo/dist/spotify/') +
       '&expires_in=3600',
     refreshaAcessToken: 'https://accounts.spotify.com/api/token'
 
