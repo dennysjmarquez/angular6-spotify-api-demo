@@ -480,12 +480,10 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var DomseguroPipe = /** @class */ (function () {
     function DomseguroPipe(_domSanitizer) {
+        var _this = this;
         this._domSanitizer = _domSanitizer;
+        this.transform = function (url) { return _this._domSanitizer.bypassSecurityTrustResourceUrl(url); };
     }
-    DomseguroPipe.prototype.transform = function (url) {
-        console.log(url);
-        return this._domSanitizer.bypassSecurityTrustResourceUrl(url);
-    };
     DomseguroPipe = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"])({
             name: 'domseguro'
@@ -903,7 +901,7 @@ var NavbarComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"card-columns columns-style-1 animated fast\">\n  <div *ngFor=\"let item of tarjetaData\" class=\"card card-style-2 animated fadeIn\" >\n    <img (click)=\"view(item)\" class=\"card-img-top card-img-style-1 puntero\" [src]=\"item.images | noimage: 1\" alt=\"Card image cap\">\n    <div class=\"card-body\">\n      <h5 class=\"card-title\">{{ item.name }}</h5>\n\n      <div *ngIf=\"item.artists\">\n        <hr class=\"style11\">\n\n        <p class=\"card-text\">\n\n          <a (click)=\"view(artists)\" *ngFor=\"let artists of item.artists;\" class=\"badge badge-dark puntero\">{{ artists.name }}</a>\n\n        </p>\n\n      </div>\n\n    </div>\n  </div>\n</div>\n\n"
+module.exports = "<div class=\"card-columns columns-style-1 animated fast\">\n  <div *ngFor=\"let item of tarjetaData\" class=\"card card-style-2 animated fadeIn\" >\n\n    <img (click)=\"view(item)\" class=\"card-img-top card-img-style-1 puntero\" [src]=\"item.images | noimage: 1\" alt=\"Card image cap\">\n\n    <div class=\"card-body\">\n      <h5 class=\"card-title\">{{ item.name }}</h5>\n\n      <div *ngIf=\"item.artists\">\n        <hr class=\"style11\">\n\n        <p class=\"card-text\">\n\n          <a (click)=\"view(artists)\" *ngFor=\"let artists of item.artists;\" class=\"badge badge-dark puntero\">{{ artists.name }}</a>\n\n        </p>\n\n      </div>\n\n    </div>\n  </div>\n</div>\n\n"
 
 /***/ }),
 
@@ -936,13 +934,12 @@ var TarjetasComponent = /** @class */ (function () {
         this.tarjetaData = [];
     }
     TarjetasComponent.prototype.view = function (v) {
-        var id = v.id;
         switch (v.type) {
             case 'album':
-                // this._router.navigate(['/artist', id]);
+                window.open(v.external_urls.spotify, '_blank');
                 break;
             case 'artist':
-                this._router.navigate(['/artist', id]);
+                this._router.navigate(['/artist', v.id]);
         }
     };
     TarjetasComponent.prototype.ngOnInit = function () { };
